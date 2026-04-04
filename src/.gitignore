@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Output folders
+/out/
+/bin/
+
+# Compiled class files
+*.class
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Eclipse
+.settings/
+.classpath
+.project

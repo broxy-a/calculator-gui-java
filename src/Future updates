@@ -1,0 +1,10 @@
+Handling invalid operations
+
+Case-safe operation support (Y, YES)
+
+Remove array → pass 2 numbers
+
+Retry input on error instead of continue
+
+Move logic to a separate class
+
