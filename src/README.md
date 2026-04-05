@@ -30,4 +30,10 @@ The calculator supports the following operations:
 3.  **Follow the instructions** displayed in the console to enter numbers and choose an operator.
 
 ---
+## Changelog
+
+## 05.04.2026
+- Refactored input handling: numbers are now read as two separate variables
+  instead of an array, improving code clarity and readabili
+
 *Created as a learning project.*
