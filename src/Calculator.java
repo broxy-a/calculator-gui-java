@@ -1,7 +1,10 @@
 import java.util.Scanner;
 
+    record Operands(double num1, double num2) {
+}
+
 public class Calculator {
-    private static double[] enteringNumbers(Scanner sc) {
+    private static Operands enteringNumbers(Scanner sc) {
         double num1, num2;
 
         System.out.print("Enter first number: ");
@@ -18,23 +21,23 @@ public class Calculator {
         }
         num2 = sc.nextDouble();
 
-        return new double[]{num1, num2};
+        return new Operands(num1, num2);
     }
 
-    private static double calculations(double[] numbers, char operation) {
+    private static double calculations(Operands operands, char operation) {
         double result = 0;
         switch (operation) {
             case '+':
-             result = numbers[0] + numbers[1];
+             result = operands.num1() + operands.num2();
              break;
             case '-':
-             result = numbers[0] - numbers[1];
+             result = operands.num1() - operands.num2();
              break;
             case '*':
-             result = numbers[0] * numbers[1];
+             result = operands.num1() * operands.num2();
              break;
             case '/':
-             result = numbers[0] / numbers[1];
+             result = operands.num1() / operands.num2();
              break;
         }
         return result;
@@ -44,16 +47,16 @@ public class Calculator {
         Scanner sc = new Scanner(System.in);
         String answer = "";
        do {
-           double[] nums = enteringNumbers(sc);
+           Operands number = enteringNumbers(sc);
 
            System.out.print("Choose operation: +, -, *, /: ");
            char c = sc.next().charAt(0);
 
-           if (c == '/' && nums[1] == 0) {
+           if (c == '/' && number.num2() == 0) {
                System.out.println("No valid result");
                continue;
            }
-           double result = calculations(nums, c);
+           double result = calculations(number, c);
            System.out.printf("Result: %.2f\n", result);
            
            System.out.println("Continue working? (yes/no)");
