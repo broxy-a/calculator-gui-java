@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-    record Operands(double num1, double num2) {}
+record Operands(double num1, double num2) {}
 
 public class Calculator {
     private static Operands enteringNumbers(Scanner sc) {
