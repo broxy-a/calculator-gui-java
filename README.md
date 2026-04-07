@@ -29,5 +29,13 @@ The calculator supports the following operations:
     ```
 3.  **Follow the instructions** displayed in the console to enter numbers and choose an operator.
 
+## Changelog
+
+### v1.1.0
+- Refactored input handling: numbers are now read as two separate variables
+  instead of an array, improving code clarity and readability.
+### v1.1.1
+- Fixed division by zero handling: validation now occurs before calculation
+
 ---
 *Created as a learning project.*
