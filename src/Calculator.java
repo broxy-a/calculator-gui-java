@@ -40,6 +40,8 @@ public class Calculator {
             case '/':
              result = operands.num1() / operands.num2();
              break;
+            default:
+                throw new IllegalArgumentException("Unknown operation");
         }
         return result;
     }
@@ -59,7 +61,7 @@ public class Calculator {
                    throw new ArithmeticException("divide by zero is impossible");
                }
                result = calculations(number, c);
-           } catch (ArithmeticException e) {
+           } catch (IllegalArgumentException | ArithmeticException e) {
                System.out.println("Error: " + e.getMessage());
            }
 
